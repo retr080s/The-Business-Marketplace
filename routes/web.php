@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Index page (main page)
 Route::get('/', function () {
     return view('index');
+});
+
+// Login page
+Route::get('/login', function(){
+    return view('login');
+});
+
+// Register page
+Route::get('/register', function(){
+    return view('register');
+});
+
+// Marketplace page
+Route::get('/marketplace', function(){
+    return view('marketplace');
 });
