@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MarketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,21 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Index page (main page)
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MarketController::class, 'index']);
 
 // Login page
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/login', [MarketController::class, 'login']);
 
 // Register page
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', [MarketController::class, 'register']);
 
 // Marketplace page
-Route::get('/marketplace', function(){
-    return view('marketplace');
-});
+Route::get('/marketplace', [MarketController::class, 'marketplace']);
+
+// Contact page
+Route::get('/contact', [MarketController::class, 'contact']);
+
+// Team page
+Route::get('/team', [MarketController::class, 'team']);
+
+// Add Listing page
+Route::get('/add-listing', [MarketController::class, 'addListing']);

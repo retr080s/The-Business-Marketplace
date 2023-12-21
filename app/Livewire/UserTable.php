@@ -4,11 +4,13 @@ namespace App\Livewire;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\User;
+// use App\Models\User;
+use App\Models\MarketplaceData;
 
 class UserTable extends DataTableComponent
 {
-    protected $model = User::class;
+    // protected $model = User::class;
+    protected $model = MarketplaceData::class;
 
     public function configure(): void
     {
@@ -18,18 +20,23 @@ class UserTable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make("Id", "id")
-                ->sortable(),
-            Column::make("Name", "name")
+            Column::make("Product", "product")
                 ->sortable()
                 ->searchable(),
-            Column::make("Email", "email")
+            Column::make("Category", "category")
                 ->sortable()
                 ->searchable(),
-            Column::make("Created at", "created_at")
-                ->sortable(),
-            Column::make("Updated at", "updated_at")
-                ->sortable(),
+            Column::make("Company", "company")
+                ->sortable()
+                ->searchable(),
+            Column::make("Price", "price")
+                ->sortable()
+                ->searchable(),
+            Column::make("Contact", "contact")
+                ->sortable()
+                ->searchable(),
+
+
         ];
     }
 }
