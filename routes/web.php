@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\MarketController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MarketController;
+use App\Http\Controllers\ProfileController;
+use App\Models\MarketplaceData;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Index page (main page)
+// Home page
 Route::get('/', [MarketController::class, 'index']);
-
-// Login page
-Route::get('/login', [MarketController::class, 'login']);
-
-// Register page
-Route::get('/register', [MarketController::class, 'register']);
-
-// Marketplace page
-Route::get('/marketplace', [MarketController::class, 'marketplace']);
 
 // Contact page
 Route::get('/contact', [MarketController::class, 'contact']);
@@ -32,5 +25,42 @@ Route::get('/contact', [MarketController::class, 'contact']);
 // Team page
 Route::get('/team', [MarketController::class, 'team']);
 
-// Add Listing page
-Route::get('/add-listing', [MarketController::class, 'addListing']);
+// Dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Marketplace (all postings)
+Route::get('/marketplace', [MarketController::class, 'marketplace'])->middleware('auth');
+
+// Add listing page
+Route::get('/add-listing', [MarketController::class, 'addListing'])->middleware('auth');
+
+// Add a listing
+Route::post('/add-listing', function(){
+    MarketplaceData::create([
+        'product' => request('product'),
+        'category' => request('category'),
+        'price' => request('price'),
+        'contact' => request('contact'),
+        'company' => request('company')
+    ]);
+    return redirect('/marketplace');
+});
+
+
+// Logout
+Route::get('/logout', 'App\Http\Controllers\Auth\AuthenticatedSessionController@destroy');
+
+// 
+// Login /login (added by Breeze)
+// Register /register (added by Breeze)
+// 
+
+require __DIR__.'/auth.php';

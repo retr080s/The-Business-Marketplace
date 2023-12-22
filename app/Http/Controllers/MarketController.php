@@ -3,22 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MarketController extends Controller
 {
     // Index page
     public function index() {
         return view('index');
-    }
-
-    // Login page
-    public function login() {
-        return view('login');
-    }
-
-    // Register page
-    public function register() {
-        return view('register');
     }
 
     // Marketplace page
@@ -38,6 +29,8 @@ class MarketController extends Controller
 
     // Add listing page
     public function addListing() {
-        return view('add-listing');
+        return view('add-listing', [
+            'user' => Auth::user()
+        ]);
     }
 }
