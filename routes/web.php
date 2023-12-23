@@ -52,7 +52,10 @@ Route::post('/add-listing', function(){
         'company' => request('company')
     ]);
     return redirect('/marketplace');
-});
+})->middleware('auth');
+
+// All listings (posted by user)
+Route::get('/listings', [MarketController::class, 'listings'])->middleware('auth');
 
 
 // Logout
