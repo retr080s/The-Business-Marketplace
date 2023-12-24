@@ -20,3 +20,33 @@ Detailed Listing Information: Each listing provides comprehensive details, inclu
 
 ## Discover the sleek and modern design of The Business Marketplace in the images below.
 
+<h2>Default look</h2>
+
+![Screenshot 2023-12-24 at 22-08-24 The Business Marketplace](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/873a7dd5-eccd-4f64-8283-aafbe3d80563)
+
+
+<h2>Search options</h2>
+
+![Screenshot 2023-12-24 at 22-09-41 The Business Marketplace](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/2968a536-f2a5-47d1-ac29-8a0ad2bc940b)
+
+<h2>Search filters</h2>
+
+![image](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/eb4162c6-6238-4135-a2aa-e23eae5e8a2e)
+
+<h2>Home page</h2>
+
+![Screenshot 2023-12-24 at 22-10-24 The Business Marketplace](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/12e5fb4c-e2d8-4e0f-bd53-68d555d61b3c)
+
+<h2>Add a listing</h2>
+
+![image](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/17fb51d1-390d-4d40-8062-cbdab53ba71f)
+
+<h2>Register page</h2>
+
+![image](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/16951083-5184-46e5-a6e4-24152847e390)
+
+<h2>Login page</h2>
+
+![image](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/0b06fc70-e866-4645-86af-ea8d8e1fb2c6)
+
+
