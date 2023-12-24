@@ -20,6 +20,11 @@ class MarketController extends Controller
         return view('marketplace');
     }
 
+    // Features page
+    public function features() {
+        return view('features');
+    }
+
     // Contact page
     public function contact() {
         return view('contact');

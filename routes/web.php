@@ -25,6 +25,9 @@ Route::get('/contact', [MarketController::class, 'contact']);
 // Team page
 Route::get('/team', [MarketController::class, 'team']);
 
+// Team page
+Route::get('/features', [MarketController::class, 'features']);
+
 // Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
