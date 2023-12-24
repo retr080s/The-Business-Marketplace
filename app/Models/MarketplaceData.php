@@ -12,4 +12,5 @@ class MarketplaceData extends Model
     public $table = 'marketplace_data_table';
 
     protected $fillable = ['product', 'category', 'company', 'price', 'contact'];
+
 }

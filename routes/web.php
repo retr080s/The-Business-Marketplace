@@ -61,6 +61,13 @@ Route::get('/listings', [MarketController::class, 'listings'])->middleware('auth
 // Logout
 Route::get('/logout', 'App\Http\Controllers\Auth\AuthenticatedSessionController@destroy');
 
+// Delete a listing
+Route::delete('/listings/{id}', function($id){
+    $listing = MarketplaceData::findOrFail($id);
+    $listing->delete();
+    return redirect('listings');
+})->name('delete-listings')->middleware('auth');
+
 // 
 // Login /login (added by Breeze)
 // Register /register (added by Breeze)

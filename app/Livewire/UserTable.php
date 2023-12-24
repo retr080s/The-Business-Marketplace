@@ -35,8 +35,6 @@ class UserTable extends DataTableComponent
             Column::make("Contact", "contact")
                 ->sortable()
                 ->searchable(),
-
-
         ];
     }
 }

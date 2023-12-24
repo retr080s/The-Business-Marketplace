@@ -45,4 +45,7 @@ class MarketController extends Controller
 
         return view('listings', compact('companyListings'));
     }
+
+
+
 }
