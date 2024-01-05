@@ -37,6 +37,11 @@ Detailed Listing Information: Each listing provides comprehensive details, inclu
 
 ![Screenshot 2023-12-24 at 22-10-24 The Business Marketplace](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/12e5fb4c-e2d8-4e0f-bd53-68d555d61b3c)
 
+<h2>My Listings</h2>
+
+![Screenshot 2024-01-05 at 19-27-04 The Business Marketplace](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/f07d8f2c-826c-4fde-ab20-cee8100d0f0f)
+
+
 <h2>Add a listing</h2>
 
 ![image](https://github.com/retr080s/The-Business-Marketplace/assets/84463361/17fb51d1-390d-4d40-8062-cbdab53ba71f)
